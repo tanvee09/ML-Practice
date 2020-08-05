@@ -94,10 +94,10 @@ while True :
         output = knn(trainset, face_section.flatten())
         pred_name = names[int(output)]
         # Display name and rectangle around face
-        cv2.putText(gray_frame, pred_name, (x,y-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
-        cv2.rectangle(gray_frame, (x,y), (x+w,y+h), (255,255,0), 5)
+        cv2.putText(frame, pred_name, (x,y-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+        cv2.rectangle(frame, (x,y), (x+w,y+h), (255,255,0), 5)
 
-    cv2.imshow("Faces", gray_frame)
+    cv2.imshow("Faces", frame)
 
     key = cv2.waitKey(1) & 0xFF
     if key == ord('q') :
